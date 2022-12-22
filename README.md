@@ -8,4 +8,4 @@ bla bla bla
 bla bla bla
 
 # Credits
-bla bla bla
+https://koyama.xyz/project/AutoConnect/autoconnect.pdf
