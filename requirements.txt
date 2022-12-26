@@ -1,0 +1,5 @@
+# required packadges for running auto-connect
+sklearn==0.0
+trimesh==3.9.36
+scipy==1.7.3
+pyglet==1.5.21
