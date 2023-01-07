@@ -3,13 +3,6 @@ import numpy as np
 epsilon = 10 ** -5
 
 
-#  size        = lambda v : np.sqrt(np.sum(np.dot(v,v)))   TODO: delete all commented shit
-#   zero_clip   = lambda x : max(x,epsilon)
-# points_diff = lambda p1,p2 : [p1[i] - p2[i] for i in range(len(p1))]
-# points_dist = lambda p1,p2 : np.sqrt(np.sum(np.square(points_diff(p1,p2))))  ------ points_distance
-# rad_to_deg  = lambda rad: 360*rad/(2*np.pi)       TODO: chagne with math.degrees in handler function_for_constaint
-
-
 def get_size(v):
     dot = np.dot(v, v)
     s = np.sum(dot)
