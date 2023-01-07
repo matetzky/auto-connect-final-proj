@@ -3,3 +3,5 @@ sklearn==0.0
 trimesh==3.9.36
 scipy==1.7.3
 pyglet==1.5.21
+configargparse==1.5.3
+Shapely==1.8.0
