@@ -1,7 +1,7 @@
-# required packadges for running auto-connect
+# required packadges for running auto-connect-final-proj
 sklearn==0.0
 trimesh==3.9.36
 scipy==1.7.3
 pyglet==1.5.21
-configargparse==1.5.3
-Shapely==1.8.0
+numpy~=1.22.4
+scikit-learn~=1.2.0
