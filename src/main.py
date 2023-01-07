@@ -39,9 +39,9 @@ def get_parser():
 # ------------------------------------------------------#
 
 def input_path(filename: str, file_type='ply'):
-    file_full_path = f'{path.curdir}{path.sep}{"inputs"}{path.sep}{filename}.{file_type}'
+    file_full_path = f'{path.pardir}{path.sep}{"inputs"}{path.sep}{filename}.{file_type}'
     if path.exists(file_full_path):
-        return f'{path.curdir}{path.sep}{"inputs"}{path.sep}{filename}.{file_type}'
+        return file_full_path
     else:
         raise ValueError('Given input file doesnt exist, pleasererunwith an existing file or add the wanted file into '
                          'inputs directory')
@@ -60,7 +60,7 @@ def main():
 
     # Folders preparing
     c = ''.join([str(i) for i in range(6) if args.constraints[0][i]])
-    out_folder = f'outputs{path.sep}{args.input}_{c}{path.sep}'
+    out_folder = f'{path.pardir}{path.sep}outputs{path.sep}{args.input}_{c}{path.sep}'
     all_folder = f'{out_folder}all'
     os.makedirs(all_folder, exist_ok=True)
 
@@ -69,10 +69,10 @@ def main():
         print(f'\n\t - Computing iteration: #{iteration}')
         starting_point = calc_starting_point(mesh_data)
         curr_shell = shell_computation(mesh_data, starting_point)
-        results.append(mesh_data.current_holder)
+        results.append(mesh_data.current_holder_T)
         vectors.append(curr_shell)
         out_path = f'{all_folder}{path.sep}{args.input}_{iteration}.obj'
-        mesh_data.current_holder.export(out_path)
+        mesh_data.current_holder_T.export(out_path)
         print(f'\n\t\t ~ Exporting: {out_path}')
 
     if args.clustering:
