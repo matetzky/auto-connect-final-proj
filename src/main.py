@@ -44,7 +44,7 @@ def input_path(filename: str, file_type='ply'):
     if path.exists(file_full_path):
         return file_full_path
     else:
-        raise ValueError('Given input file doesnt exist, pleasererunwith an existing file or add the wanted file into '
+        raise ValueError('Given input file doesnt exist, please rerun with an existing file or add the wanted file into '
                          'inputs directory')
 
 
