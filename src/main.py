@@ -3,6 +3,7 @@ import trimesh
 import os.path as path
 import configargparse
 from trimesh_handler import *
+import timeit
 
 
 # --------------------------------------------------------#
@@ -63,7 +64,7 @@ def main():
     out_folder = f'{path.pardir}{path.sep}outputs{path.sep}{args.input}_{c}{path.sep}'
     all_folder = f'{out_folder}all'
     os.makedirs(all_folder, exist_ok=True)
-
+    start = timeit.default_timer()
     for iteration in range(args.iterations):
         print(f'\n Staring computing for {args.input} ')
         print(f'\n\t - Computing iteration: #{iteration}')
@@ -93,7 +94,7 @@ def main():
                         clustered[i] = True
 
     print(f'\nFinished running Auto-Connect for {args.input} \n')
-
+    print(f'Execution took: {timeit.default_timer()-start} seconds\n')
 
 if __name__ == "__main__":
     main()
