@@ -12,12 +12,12 @@ In this project we implemented only phase 1 of the article and produce an holder
 
 
 # How to run: 
-1. Clone this repo.
-2. Install all the requirement `pip install -r requirements.txt`
-3. Download and install https://git-lfs.github.com/
+1. Download and install https://git-lfs.github.com/
+2. Clone this repo.
+3. Install all the requirement `pip install -r requirements.txt`
 4. place your object file in Inputs directory, we support ply files.
 5. Using the terminal change directory into src dir: `cd src`
-5. Run command: `main.py` argument should be provided followed by this description:
+6. Run command: `main.py` argument should be provided followed by this description:
 
 * <b>`--input, -in`</b> &nbsp; <span style="color:red"> required </span>  
    object name to use as input from inputs folder, input file MUST be in inputs folder
